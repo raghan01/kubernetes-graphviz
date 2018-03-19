@@ -5,26 +5,26 @@ metadata:
   # these labels can be applied automatically
   # from the labels in the pod template if not set
   labels:
-    app: graphviz
+    app: wms
     tier: frontend
 spec:
   replicas: 3
   # these labels can be applied automatically
   # from the labels in the pod template if not set
   # selector:
-  #  app: graphviz
+  #  app: wms
   #  tier: frontend
   # Pod Template
   template:
     metadata:
       labels:
-        app: graphviz
+        app: wms
         tier: frontend
     spec:
       containers:
       - name: webapp
         # Uncomment this line to use the public docker hub image
-        image: omerio/graphviz-webapp
+        image: omerio/wms-webapp
         # my own private Container Registry image
         #image: gcr.io/gdg-apps-1090/graphviz-webapp
         resources:
