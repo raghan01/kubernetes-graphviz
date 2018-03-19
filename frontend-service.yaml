@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: frontend-service
   labels:
-    app: graphviz
+    app: wms
     tier: frontend
 spec:
   # More details on LoadBalancer services here:
@@ -18,5 +18,5 @@ spec:
     # The port that should be targeted on the Pods
     targetPort: 8080
   selector:
-    app: graphviz
+    app: wms
     tier: frontend
