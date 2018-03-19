@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: backend-service
   labels:
-    app: graphviz
+    app: wms
     tier: backend
 spec:
   ports:
@@ -14,5 +14,5 @@ spec:
     # The port that should be targeted on the Pods
     targetPort: 8080
   selector:
-    app: graphviz
+    app: wms
     tier: backend
