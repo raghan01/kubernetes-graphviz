@@ -24,7 +24,7 @@ spec:
       containers:
       - name: webapp
         # Uncomment this line to use the public docker hub image
-        image: omerio/wms-webapp
+        image: omerio/graphviz-webapp
         # my own private Container Registry image
         #image: gcr.io/gdg-apps-1090/graphviz-webapp
         resources:
