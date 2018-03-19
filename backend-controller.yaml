@@ -5,7 +5,7 @@ metadata:
   # these labels can be applied automatically
   # from the labels in the pod template if not set
   labels:
-    app: graphviz
+    app: wms
     tier: backend
 spec:
   replicas: 2
@@ -13,21 +13,16 @@ spec:
   template:
     metadata:
       labels:
-        app: graphviz
+        app: wms
         tier: backend
     spec:
       containers:
       - name: server
         # Uncomment this line to use the public docker hub image
-        image: omerio/graphviz-server
-        # my own private Container Registry image
-        #image: gcr.io/gdg-apps-1090/graphviz-server
-        # Arguments to the image entrypoint, more details here:
-        # http://kubernetes.io/v1.1/docs/api-reference/v1/definitions.html#_v1_container
+        image: raghan01/wms
         args: ["8080"]
         resources:
           # The resources specification for each Pod, more details here:
-          # http://kubernetes.io/v1.1/docs/design/resources.html#resource-specifications
           requests:
             cpu: 100m
             memory: 100Mi
